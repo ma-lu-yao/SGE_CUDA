@@ -1,4 +1,5 @@
-Install
+##Install
+
 1. modfiy /etc/sysconfig/gridengine or  /etc/sysconfig/gridengine-8.1.9
 
 
@@ -9,7 +10,7 @@ Install
 use qconf -mc command
 
 #name               shortcut   type        relop requestable consumable default  urgency
-#----------------------------------------------------------------------------------------
+\#----------------------------------------------------------------------------------------
 ngpus                 gpu        INT         <=    YES         YES        0        0
 
 
@@ -17,7 +18,7 @@ modify exec host, add complex_values by command (for each GPU node):
 qconf -me node01.abc.org
 complex_values        ngpus=4
 
-#=====================================================================
+\#=====================================================================
 3.start mysql server by command:
 sudo systemctl start mysql
 mysql -u root
