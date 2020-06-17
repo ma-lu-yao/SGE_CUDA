@@ -1,10 +1,10 @@
 ## Install
 
-1. modfiy /etc/sysconfig/gridengine or  /etc/sysconfig/gridengine-8.1.9
+- modfiy /etc/sysconfig/gridengine or  /etc/sysconfig/gridengine-8.1.9
 
 #=====================================================================
 
-2.Config sge
+- Config sge
 
 use qconf -mc command
 
@@ -22,7 +22,7 @@ qconf -me node01.abc.org
 complex_values        ngpus=4
 
 #=====================================================================
-3.start mysql server by command:
+- start mysql server by command:
 sudo systemctl start mysql
 mysql -u root
 run sql in mariadb command line:
