@@ -2,7 +2,6 @@
 
 1. modfiy /etc/sysconfig/gridengine or  /etc/sysconfig/gridengine-8.1.9
 
-
 #=====================================================================
 
 2.Config sge
@@ -10,15 +9,19 @@
 use qconf -mc command
 
 #name               shortcut   type        relop requestable consumable default  urgency
-\#----------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------
+
 ngpus                 gpu        INT         <=    YES         YES        0        0
 
 
 modify exec host, add complex_values by command (for each GPU node):
+
 qconf -me node01.abc.org
+
 complex_values        ngpus=4
 
-\#=====================================================================
+#=====================================================================
 3.start mysql server by command:
 sudo systemctl start mysql
 mysql -u root
@@ -33,6 +36,5 @@ Edit /usr/share/sgecuda/generate_SQL.sh  ,modify the FQDN(A fully qualified doma
 mysql -u sgecuda sgecuda -p < sgecuda.sql
 
 5.Generate RPM with sgecuda.spec
-
 
 version 0.6
