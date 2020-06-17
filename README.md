@@ -4,7 +4,7 @@
 
 2. Config sge
 
-use qconf -mc command
+```qconf -mc command
 
 #name               shortcut   type        relop requestable consumable default  urgency
 
@@ -16,7 +16,7 @@ modify exec host, add complex_values by command (for each GPU node):
 qconf -me node01.abc.org
 
 complex_values        ngpus=4
-
+```
 
 3. start mysql server by command:
 ```
