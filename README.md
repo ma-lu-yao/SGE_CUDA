@@ -32,7 +32,19 @@ Edit /usr/share/sgecuda/generate_SQL.sh  ,modify the FQDN(A fully qualified doma
 ``` /usr/share/sgecuda/generate_SQL.sh > sgecuda.sql ```
 ``` mysql -u sgecuda sgecuda -p < sgecuda.sql ```
 
-5. Generate RPM with sgecuda.spec
+5. Generate RPM with sgecuda.spec ,RPM file list:
+```
+/etc/httpd/conf.d/sgecuda.conf
+/run/sgecuda/
+/usr/lib/systemd/system/sgecuda.service
+/usr/sbin/sgecuda.sh
+/usr/share/doc/sgecuda-qmaster-0.6
+/usr/share/doc/sgecuda-qmaster-0.6/README.md
+/usr/share/doc/sgecuda-qmaster-0.6/filldata.sh
+/usr/share/sgecuda/index.php
+
+```
+6. Start Apache httpd / sgecuda 
 
 version 0.6
 
