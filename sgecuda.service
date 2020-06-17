@@ -1,0 +1,14 @@
+[Unit]
+Description=Gridengie Database check for CUDA_DEVICES
+#After=sgemaster
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/sysconfig/gridengine
+EnvironmentFile=-/etc/sysconfig/gridengine-8.1.9
+ExecStart=/usr/sbin/sgecuda.sh
+PIDFile=/run/sgecuda/sgecuda.pid
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
