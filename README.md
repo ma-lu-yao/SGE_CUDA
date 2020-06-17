@@ -1,10 +1,10 @@
 ## Install
 
-- modfiy /etc/sysconfig/gridengine or  /etc/sysconfig/gridengine-8.1.9
+1. modfiy /etc/sysconfig/gridengine or  /etc/sysconfig/gridengine-8.1.9
 
 #=====================================================================
 
-- Config sge
+2. Config sge
 
 use qconf -mc command
 
@@ -22,7 +22,7 @@ qconf -me node01.abc.org
 complex_values        ngpus=4
 
 #=====================================================================
-- start mysql server by command:
+3. start mysql server by command:
 sudo systemctl start mysql
 mysql -u root
 run sql in mariadb command line:
@@ -35,6 +35,7 @@ Edit /usr/share/sgecuda/generate_SQL.sh  ,modify the FQDN(A fully qualified doma
 /usr/share/sgecuda/generate_SQL.sh > sgecuda.sql 
 mysql -u sgecuda sgecuda -p < sgecuda.sql
 
-5.Generate RPM with sgecuda.spec
+5. Generate RPM with sgecuda.spec
 
 version 0.6
+Author: maluyao@gmail.com
